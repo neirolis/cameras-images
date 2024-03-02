@@ -1,0 +1,26 @@
+exec: './images'
+version: v0.1.0
+author: sg3des
+url: https://github.com/neirolis/cameras-images
+player: mjpeg
+
+transport: stdout
+serialize: mjpeg
+
+support:
+  addr: ./video
+  archive: 'mjpeg'
+  monitor: false
+
+variables:
+  - name: timeout
+    default: 100
+    label: Timeout
+    type: number
+    help: Timeout[ms] between image reads
+
+  - name: desc
+    value: Read images from specified directory
+    readonly: true
+    system: true
+    type: hidden
